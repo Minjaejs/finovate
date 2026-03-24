@@ -5,91 +5,92 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white pt-24 pb-12 text-[#425466] relative overflow-hidden border-t border-gray-100">
+    <footer className="bg-white pt-32 pb-16 text-brand-body relative overflow-hidden border-t border-slate-100">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-brand-primary/20 to-transparent"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-12 mb-24">
 
-          <div className="lg:col-span-5 pr-0 lg:pr-10">
-            <a href="#home" className="text-[28px] font-display font-black text-[#0A2540] tracking-tight mb-6 inline-block hover:text-[#635BFF] transition-colors">
-              Finovate
+          <div className="lg:col-span-5 pr-0 lg:pr-16">
+            <a href="#home" className="text-[32px] font-display font-black text-brand-dark tracking-tighter mb-8 inline-block hover:text-brand-primary transition-all duration-300">
+              Finovate<span className="text-brand-primary">.</span>
             </a>
-            <p className="text-[16px] leading-[1.6] mb-6 font-medium max-w-sm">
+            <p className="text-[17px] leading-[1.7] mb-8 font-medium max-w-sm text-brand-body/80">
               Empowering top UK accounting firms with dedicated, highly-trained, and fully compliant offshore infrastructure.
             </p>
             
-            <div className="flex flex-col gap-3 mb-8">
-              <div className="flex items-center gap-3 text-[#10B981]">
+            <div className="flex flex-col gap-5 mb-10">
+              <div className="flex items-center gap-3 text-emerald-500 bg-emerald-50 w-fit px-4 py-2 rounded-xl border border-emerald-100/50">
                 <ShieldCheck className="w-5 h-5 flex-shrink-0" />
-                <span className="text-[13px] font-bold tracking-tight uppercase font-display">100% GDPR, ICO & SOC2 Compliant</span>
+                <span className="text-[12px] font-black tracking-[0.1em] uppercase font-display">100% GDPR & SOC2 Compliant</span>
               </div>
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-2">
-                  <div className="w-6 h-6 rounded-full bg-gray-200 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80" alt="avatar" className="w-full h-full object-cover" /></div>
-                  <div className="w-6 h-6 rounded-full bg-gray-300 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" alt="avatar" className="w-full h-full object-cover" /></div>
-                  <div className="w-6 h-6 rounded-full bg-[#14B8A6] border-2 border-white shadow-sm flex items-center justify-center text-[10px] text-white font-bold leading-none">+</div>
+              <div className="flex items-center gap-3 pl-1">
+                <div className="flex -space-x-2.5">
+                  <div className="w-8 h-8 rounded-full bg-slate-100 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&q=80" alt="avatar" className="w-full h-full object-cover" /></div>
+                  <div className="w-8 h-8 rounded-full bg-slate-200 border-2 border-white shadow-sm flex items-center justify-center overflow-hidden"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&q=80" alt="avatar" className="w-full h-full object-cover" /></div>
+                  <div className="w-8 h-8 rounded-full bg-brand-primary border-2 border-white shadow-sm flex items-center justify-center text-[11px] text-white font-black leading-none">+</div>
                 </div>
-                <span className="text-[13px] font-medium text-gray-500 ml-1">Trusted by 100+ Firms</span>
+                <span className="text-[14px] font-bold text-gray-400 ml-1">Trusted by 100+ UK Firms</span>
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-[#0A2540] font-bold mb-6 text-[14px] font-display">Products</h4>
-            <ul className="space-y-4 text-[14px] font-medium">
-              <li><a href="#" className="hover:text-[#635BFF] transition-colors">Bookkeeping</a></li>
-              <li><a href="#" className="hover:text-[#635BFF] transition-colors">Final Accounts</a></li>
-              <li><a href="#" className="hover:text-[#635BFF] transition-colors">Management</a></li>
-              <li><a href="#" className="hover:text-[#635BFF] transition-colors">VAT Returns</a></li>
-              <li><a href="#" className="hover:text-[#635BFF] transition-colors">Payroll API</a></li>
+            <h4 className="text-brand-dark font-black mb-8 text-[12px] font-display uppercase tracking-widest">Solutions</h4>
+            <ul className="space-y-5 text-[15px] font-medium">
+              <li><a href="#" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block transform transition-transform duration-300">Bookkeeping</a></li>
+              <li><a href="#" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block transform transition-transform duration-300">Final Accounts</a></li>
+              <li><a href="#" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block transform transition-transform duration-300">Management Accounts</a></li>
+              <li><a href="#" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block transform transition-transform duration-300">VAT Returns</a></li>
+              <li><a href="#" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block transform transition-transform duration-300">Payroll</a></li>
             </ul>
           </div>
 
           <div className="lg:col-span-2">
-            <h4 className="text-[#0A2540] font-bold mb-6 text-[14px] font-display">Company</h4>
-            <ul className="space-y-4 text-[14px] font-medium">
-              <li><a href="#about" className="hover:text-[#635BFF] transition-colors">About Us</a></li>
-              <li><a href="#how-it-works" className="hover:text-[#635BFF] transition-colors">Deployment</a></li>
-              <li><a href="#pricing" className="hover:text-[#635BFF] transition-colors">ROI Calculator</a></li>
-              <li><a href="#" className="hover:text-[#635BFF] transition-colors">Security</a></li>
-              <li><a href="#" className="hover:text-[#635BFF] transition-colors">Careers</a></li>
+            <h4 className="text-brand-dark font-black mb-8 text-[12px] font-display uppercase tracking-widest">Company</h4>
+            <ul className="space-y-5 text-[15px] font-medium">
+              <li><a href="#about" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block transform transition-transform duration-300">About Us</a></li>
+              <li><a href="#how-it-works" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block transform transition-transform duration-300">Deployment</a></li>
+              <li><a href="#pricing" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block transform transition-transform duration-300">Pricing</a></li>
+              <li><a href="#" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block transform transition-transform duration-300">Security</a></li>
+              <li><a href="#" className="hover:text-brand-primary transition-colors hover:translate-x-1 inline-block transform transition-transform duration-300">Careers</a></li>
             </ul>
           </div>
 
           <div className="lg:col-span-3">
-            <h4 className="text-[#0A2540] font-bold mb-6 text-[14px] font-display">Updates</h4>
-            <p className="text-[13px] font-medium mb-6">
-              Subscribe for industry insights and scalability tips.
+            <h4 className="text-brand-dark font-black mb-8 text-[12px] font-display uppercase tracking-widest">Newsletter</h4>
+            <p className="text-[14px] font-medium mb-8 text-brand-body/70 leading-relaxed">
+              Subscribe for industry insights and scalability tips for UK accounting firms.
             </p>
-            <div className="relative mb-8">
+            <div className="relative mb-10 group">
               <input
                 type="email"
-                placeholder="Email address"
-                className="w-full bg-white border border-gray-200 rounded-[12px] px-4 py-3 text-[#0A2540] placeholder-gray-400 focus:outline-none focus:border-[#635BFF] focus:ring-4 focus:ring-[#635BFF]/10 transition-all text-[14px] font-medium"
+                placeholder="Work email"
+                className="w-full bg-slate-50 border border-slate-200 rounded-2xl px-5 py-4 text-brand-dark placeholder-gray-400 focus:outline-none focus:border-brand-primary focus:ring-4 focus:ring-brand-primary/10 transition-all text-[15px] font-medium"
               />
               <button
-                className="absolute right-1 top-1 bottom-1 px-4 bg-[#635BFF] hover:bg-[#524BCC] text-white rounded-[10px] font-display font-bold text-[13px] transition-colors shadow-sm"
+                className="absolute right-1.5 top-1.5 bottom-1.5 w-12 flex items-center justify-center bg-brand-primary hover:bg-brand-secondary text-white rounded-xl transition-all duration-300 shadow-sm"
                 aria-label="Subscribe"
               >
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
-            <a href="mailto:contact@finovate.io" className="flex items-center gap-3 text-[#425466] hover:text-[#00D4FF] transition-colors group">
-              <div className="p-2 bg-gray-50 rounded-[8px] border border-gray-200 group-hover:bg-[#00D4FF]/10 group-hover:border-[#00D4FF]/30 transition-colors">
-                <Mail className="w-4 h-4" />
+            <a href="mailto:hello@finovate.io" className="flex items-center gap-4 text-brand-body hover:text-brand-primary transition-all group">
+              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 group-hover:bg-brand-primary/10 group-hover:border-brand-primary/30 transition-all duration-300">
+                <Mail className="w-5 h-5" />
               </div>
-              <span className="font-semibold tracking-wide text-[14px]">contact@finovate.io</span>
+              <span className="font-bold tracking-tight text-[15px]">hello@finovate.io</span>
             </a>
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-gray-100 text-[13px] font-medium tracking-wide">
-          <p>&copy; {currentYear} Finovate Outsourcing Ltd.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-[#0A2540] transition-colors">Privacy</a>
-            <a href="#" className="hover:text-[#0A2540] transition-colors">Terms</a>
-            <a href="#" className="hover:text-[#0A2540] transition-colors">Cookie Policy</a>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-slate-100 text-[14px] font-medium tracking-tight text-gray-400">
+          <p>&copy; {currentYear} Finovate Outsourcing Ltd. Registered in England & Wales.</p>
+          <div className="flex gap-8">
+            <a href="#" className="hover:text-brand-dark transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-brand-dark transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-brand-dark transition-colors">Cookies</a>
           </div>
         </div>
 

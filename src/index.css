@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #0A2540;
-  --color-secondary: #00D4FF;
-  --color-accent: #635BFF;
-  --color-brand-bg: #F6F9FC;
-  --color-brand-dark: #0A2540;
+  /* Strategic Color Palette (Finovate Premium) */
+  --color-brand-primary: #14B8A6; /* Teal - High Action */
+  --color-brand-primary-hover: #0D9488;
+  --color-brand-secondary: #6366F1; /* Indigo - Tech Trust */
+  --color-brand-secondary-hover: #4F46E5;
+  --color-brand-accent: #22D3EE; /* Cyan - Detail Gradient */
+  --color-brand-dark: #0F172A; /* Slate 900 - Text Dominance */
+  --color-brand-body: #475569; /* Slate 600 - Secondary Content */
+  --color-brand-bg: #F8FAFC; /* Slate 50 - Surface Background */
+  
+  --font-display: "Poppins", "Inter", "system-ui", "sans-serif";
+  --font-sans: "Inter", "Roboto", "system-ui", "sans-serif";
 }
 
 @layer base {
 
-  *,
-  ::before,
-  ::after {
-    font-family: 'Inter', 'Roboto', 'Open Sans', 'Poppins' !important;
-  }
-
   body {
-    background-color: var(--color-brand-bg);
-    color: #425466;
+    @apply bg-brand-bg text-brand-body font-sans;
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -29,124 +29,84 @@
     scroll-behavior: smooth;
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #0A2540;
-    font-family: 'Poppins', 'Inter', 'Roboto', 'Open Sans' !important;
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-brand-dark font-display font-black tracking-tight;
   }
 }
 
 @layer utilities {
-  .font-display {
-    font-family: 'Poppins', 'Inter', 'Roboto', 'Open Sans' !important;
-  }
-
   .text-gradient {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(135deg, #0A2540, #635BFF 50%, #00D4FF);
+    background-image: linear-gradient(135deg, theme('colors.brand-primary'), theme('colors.brand-secondary'), theme('colors.brand-accent'));
   }
 
-  /* Stripe-like Mesh Gradient Animation */
+  /* Stripe-like Mesh Gradient Animation - Refined Colors */
   .bg-mesh {
-    background: radial-gradient(at 0% 0%, rgba(99, 91, 255, 0.08) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(0, 212, 255, 0.08) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(99, 91, 255, 0.08) 0px, transparent 50%),
-      radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
-    animation: meshFlow 20s ease-in-out infinite alternate;
+    background: radial-gradient(at 0% 0%, rgba(20, 184, 166, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(34, 211, 238, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+    animation: meshFlow 25s ease-in-out infinite alternate;
   }
 
   @keyframes meshFlow {
-    0% {
-      background-position: 0% 0%;
-    }
-
-    100% {
-      background-position: 100% 100%;
-    }
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
   }
 
   /* Deep sleek shadow like Stripe cards */
-  .shadow-super-layered {
-    box-shadow: 0 50px 100px -20px rgba(50, 50, 93, 0.12),
-      0 30px 60px -30px rgba(0, 0, 0, 0.15),
-      inset 0 -2px 6px 0 rgba(10, 37, 64, 0.02);
+  .shadow-premium {
+    box-shadow: 0 50px 100px -20px rgba(15, 23, 42, 0.1),
+                0 30px 60px -30px rgba(0, 0, 0, 0.08),
+                inset 0 -2px 6px 0 rgba(15, 23, 42, 0.01);
   }
 
   .shadow-float {
-    box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-      0 8px 16px -8px rgba(0, 0, 0, 0.3),
-      0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+    box-shadow: 0 13px 27px -5px rgba(15, 23, 42, 0.1),
+                0 8px 16px -8px rgba(0, 0, 0, 0.1),
+                0 -6px 16px -6px rgba(0, 0, 0, 0.01);
   }
 
-  /* Premium Linear/Stripe glowing edge card */
+  /* Premium Glowing edge card */
   .card-premium {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04),
-      0 2px 4px rgba(0, 0, 0, 0.04),
-      0 4px 8px rgba(0, 0, 0, 0.04),
-      0 8px 16px rgba(0, 0, 0, 0.04),
-      0 16px 32px rgba(0, 0, 0, 0.04),
-      inset 0 1px 0 rgba(255, 255, 255, 0.5);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.06);
+    @apply bg-white rounded-3xl border border-white transition-all duration-500 relative;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.02),
+                0 4px 12px rgba(15, 23, 42, 0.03);
+    overflow: hidden;
   }
 
   .card-premium:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04),
-      0 4px 8px rgba(0, 0, 0, 0.04),
-      0 16px 32px rgba(50, 50, 93, 0.08),
-      0 32px 64px rgba(50, 50, 93, 0.12),
-      inset 0 1px 0 rgba(255, 255, 255, 1);
-    border: 1px solid rgba(99, 91, 255, 0.4);
+    @apply -translate-y-2;
+    box-shadow: 0 20px 40px -20px rgba(15, 23, 42, 0.12),
+                0 15px 30px -15px rgba(0, 0, 0, 0.08);
   }
 
-  /* Animated Glowing Border Container - Ultra Refined */
-  .glowing-border-wrapper {
-    position: relative;
-    border-radius: inherit;
-    z-index: 1;
-  }
-
-  .glowing-border-wrapper::before {
+  .card-premium::before {
     content: '';
     position: absolute;
     inset: -1px;
     z-index: -1;
-    border-radius: inherit;
-    background: linear-gradient(135deg, rgba(99, 91, 255, 0.6), rgba(0, 212, 255, 0.6), transparent 60%);
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.4), rgba(99, 102, 241, 0.4), transparent 60%);
     opacity: 0;
     transition: opacity 0.5s ease;
   }
 
-  .glowing-border-wrapper:hover::before {
+  .card-premium:hover::before {
     opacity: 1;
+  }
+
+  /* High-end Glass Panel */
+  .glass-premium {
+    @apply bg-white/70 backdrop-blur-2xl border border-white/50 shadow-xl;
+    box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.1),
+                inset 0 1px 1px rgba(255, 255, 255, 0.5);
   }
 
   /* Additional glass utilities */
   .glass-panel-dark {
-    background: rgba(10, 37, 64, 0.4);
-    backdrop-filter: blur(24px) saturate(150%);
-    -webkit-backdrop-filter: blur(24px) saturate(150%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  }
-
-  /* Subpixel precision line dividers */
-  .hairline-b {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  }
-
-  .hairline-t {
-    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    @apply bg-brand-dark/40 backdrop-blur-3xl border border-white/10 shadow-2xl;
   }
 }
 

@@ -11,21 +11,21 @@ const securityFeatures = [
 
 const Security = () => {
   return (
-    <section className="py-20 lg:py-28 bg-[#0A2540] text-white relative overflow-hidden">
+    <section id="security" className="py-16 lg:py-24 bg-brand-dark text-white relative overflow-hidden">
       {/* Dynamic Background Glows */}
       <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none mix-blend-overlay"></div>
-      <div className="absolute -top-[300px] right-[100px] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00D4FF]/20 via-[#635BFF]/5 to-transparent rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute -top-[300px] right-[100px] w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-brand-accent/20 via-brand-secondary/5 to-transparent rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="max-w-[1300px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
 
-        <div className="grid lg:grid-cols-12 gap-16 lg:gap-12 items-center">
-          <div className="lg:col-span-5 relative pr-0 lg:pr-10">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div className="lg:col-span-5 relative pr-0 lg:pr-8">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#10B981]/10 text-[#10B981] font-bold text-[11px] uppercase tracking-[0.2em] mb-6 border border-[#10B981]/20 rounded-[8px] shadow-sm"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-brand-primary/10 text-brand-primary font-black text-[10px] uppercase tracking-[0.2em] mb-7 border border-brand-primary/20 rounded-lg shadow-sm"
             >
               Enterprise Security
             </motion.div>
@@ -34,22 +34,22 @@ const Security = () => {
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, delay: 0.1 }}
-              className="text-[28px] lg:text-[36px] font-display font-bold tracking-[-0.02em] mb-8 leading-[1.15] text-white drop-shadow-sm"
+              className="text-[28px] lg:text-[36px] font-display font-black tracking-tight mb-7 leading-[1.15] text-white drop-shadow-sm"
             >
-              Data Security & <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00D4FF] via-emerald-300 to-[#10B981]">Confidentiality.</span>
+              Data Security & <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-emerald-300 to-emerald-500">Confidentiality.</span>
             </motion.h2>
 
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, delay: 0.2 }}
-              className="text-[16px] lg:text-[18px] text-blue-50/70 leading-[1.65] font-medium tracking-tight"
+              className="text-[15px] lg:text-[17px] text-blue-100/60 leading-[1.65] font-medium tracking-tight"
             >
-              We strictly follow GDPR-compliant processes supported by structured internal data protection controls. All client information is handled under secure access management protocols with restricted system permissions. Confidentiality agreements, controlled data access, and monitored workflows ensure your firm’s information and your clients’ privacy remain fully protected at all times.
+              We follow GDPR-compliant processes supported by structured internal data protection controls. All client information is handled under secure access management protocols with restricted system permissions. Your firm’s information and clients’ privacy remain fully protected.
             </motion.p>
           </div>
 
-          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6 lg:gap-8">
             {securityFeatures.map((feature, i) => (
               <motion.div
                 key={i}
@@ -57,18 +57,21 @@ const Security = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="group"
               >
-                <div className="h-full rounded-[24px] p-8 lg:p-12 bg-gradient-to-br from-[#1E293B]/80 to-transparent border border-[#334155] transition-all duration-500 ease-[0.16_1_0.3_1] group cursor-default shadow-[0_4px_25px_rgba(0,0,0,0.3)] hover:shadow-[0_0_40px_rgba(99,91,255,0.2)] hover:border-[#635BFF]/50 hover:-translate-y-2 relative overflow-hidden backdrop-blur-md">
+                <div className="h-full rounded-3xl p-7 lg:p-8 bg-slate-900/40 border border-slate-800 transition-all duration-500 ease-out cursor-default shadow-sm hover:shadow-premium hover:border-brand-secondary/40 hover:-translate-y-1.5 relative overflow-hidden backdrop-blur-md">
                    {/* Background Glow */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#635BFF]/0 to-[#00D4FF]/0 group-hover:from-[#635BFF]/10 group-hover:to-[#00D4FF]/10 transition-colors duration-500 pointer-events-none"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary/0 to-brand-accent/0 group-hover:from-brand-secondary/10 group-hover:to-brand-accent/10 transition-colors duration-500 pointer-events-none"></div>
 
                   <div className="flex flex-col gap-6 relative z-10">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-[#0A2540] border border-[#635BFF]/30 rounded-[16px] text-[#00D4FF] group-hover:scale-110 group-hover:bg-[#635BFF] group-hover:text-white group-hover:border-[#635BFF] transition-all duration-500 ease-[0.16_1_0.3_1] shadow-[0_0_15px_rgba(0,212,255,0.1)] group-hover:shadow-[0_0_25px_rgba(99,91,255,0.4)]">
-                      {feature.icon}
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-brand-dark border border-slate-700 rounded-xl text-brand-accent group-hover:scale-110 group-hover:bg-brand-secondary group-hover:text-white group-hover:border-white/20 transition-all duration-500 ease-out">
+                      <div className="group-hover:text-white transition-colors duration-300 scale-90">
+                        {feature.icon}
+                      </div>
                     </div>
                     <div>
-                      <h3 className="text-[20px] font-display font-bold mb-3 text-white tracking-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-blue-200 transition-all">{feature.title}</h3>
-                      <p className="text-blue-50/70 text-[15px] leading-[1.65] font-medium tracking-tight">
+                      <h3 className="text-[18px] font-display font-bold mb-3 text-white tracking-tight group-hover:text-white transition-all duration-300">{feature.title}</h3>
+                      <p className="text-blue-100/50 text-[14px] leading-[1.6] font-medium tracking-tight group-hover:text-blue-100/80 transition-colors duration-300">
                         {feature.text}
                       </p>
                     </div>
